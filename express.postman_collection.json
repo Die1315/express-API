@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "d2350fa7-d9fa-46a8-945c-41dd1d759205",
+		"name": "express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17855983"
+	},
+	"item": [
+		{
+			"name": "/api/employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees?page=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees?page=2",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "employees?page=N",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "employees/oldest",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "employees?user=true",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "api/employees agregar ok",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Diego\",\r\n        \"age\": 19,\r\n        \"phone\": {\r\n            \"personal\": \"555-123-123\",\r\n            \"work\": \"555-456-456\",\r\n            \"ext\": \"2342\"\r\n        },\r\n        \"privileges\": \"user\",\r\n        \"favorites\": {\r\n            \"artist\": \"Picasso\",\r\n            \"food\": \"pizza\"\r\n        },\r\n        \"finished\": [\r\n            17,\r\n            3\r\n        ],\r\n        \"badges\": [\r\n            \"blue\",\r\n            \"black\"\r\n        ],\r\n        \"points\": [\r\n            {\r\n                \"points\": 85,\r\n                \"bonus\": 20\r\n            },\r\n            {\r\n                \"points\": 85,\r\n                \"bonus\": 10\r\n            }\r\n        ]\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/employees agregar Error  ext  como num",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Diego\",\r\n        \"age\": 19,\r\n        \"phone\": {\r\n            \"personal\": \"555-123-123\",\r\n            \"work\": \"555-456-456\",\r\n            \"ext\": \"2342\"\r\n        },\r\n        \"privileges\": \"user\",\r\n        \"favorites\": {\r\n            \"artist\": \"Picasso\",\r\n            \"food\": \"pizza\"\r\n        },\r\n        \"finished\": [\r\n            17,\r\n            3\r\n        ],\r\n        \"badges\": [\r\n            \"blue\",\r\n            \"black\"\r\n        ],\r\n        \"points\": [\r\n            {\r\n                \"points\": 85,\r\n                \"bonus\": 20\r\n            },\r\n            {\r\n                \"points\": 85,\r\n                \"bonus\": 10\r\n            }\r\n        ]\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/employees/:NAME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees/Su",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"Su"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
